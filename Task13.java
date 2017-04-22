@@ -156,13 +156,15 @@ public class Task13
                 else if(weapons.contains(clue)) weapons.remove(clue);
                 else if(locations.contains(clue)) locations.remove(clue);
             }
-
-            for(Rule r : rules)
+            for(int iii=0;iii<3;iii++)
             {
-                if(r.eval())
+               for(Rule r : rules)
                 {
-                    System.out.println("{["+cluenum+"] ["+suspects.get(0)+"] ["+weapons.get(0)+"] ["+locations.get(0)+"]}");
-                    return;
+                    if(r.eval())
+                    {
+                        System.out.println("{["+cluenum+"] ["+suspects.get(0)+"] ["+weapons.get(0)+"] ["+locations.get(0)+"]}");
+                        return;
+                    }
                 }
             }
             cluenum++;
