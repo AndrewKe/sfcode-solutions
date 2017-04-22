@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class TicTacToe
+public class Task11
 {
     public static void main(String[] args)
     {
